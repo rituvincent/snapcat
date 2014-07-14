@@ -19,6 +19,9 @@
 		562DA36E197459E500349298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA356197459E500349298 /* UIKit.framework */; };
 		562DA376197459E500349298 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 562DA374197459E500349298 /* InfoPlist.strings */; };
 		562DA378197459E500349298 /* SnapcatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 562DA377197459E500349298 /* SnapcatTests.m */; };
+		5646EF15197469CD00E1342D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5646EF13197469CD00E1342D /* RootViewController.m */; };
+		5646EF2119749AB500E1342D /* snapcat1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5646EF2019749AB500E1342D /* snapcat1.gif */; };
+		5646EF2319749ABC00E1342D /* snapcat2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5646EF2219749ABC00E1342D /* snapcat2.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		562DA373197459E500349298 /* SnapcatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapcatTests-Info.plist"; sourceTree = "<group>"; };
 		562DA375197459E500349298 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		562DA377197459E500349298 /* SnapcatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapcatTests.m; sourceTree = "<group>"; };
+		5646EF12197469CD00E1342D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5646EF13197469CD00E1342D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5646EF2019749AB500E1342D /* snapcat1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snapcat1.gif; sourceTree = "<group>"; };
+		5646EF2219749ABC00E1342D /* snapcat2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snapcat2.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +114,10 @@
 		562DA358197459E500349298 /* Snapcat */ = {
 			isa = PBXGroup;
 			children = (
+				5646EF2219749ABC00E1342D /* snapcat2.gif */,
+				5646EF2019749AB500E1342D /* snapcat1.gif */,
+				5646EF12197469CD00E1342D /* RootViewController.h */,
+				5646EF13197469CD00E1342D /* RootViewController.m */,
 				562DA361197459E500349298 /* SCAppDelegate.h */,
 				562DA362197459E500349298 /* SCAppDelegate.m */,
 				562DA364197459E500349298 /* Images.xcassets */,
@@ -223,8 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5646EF2319749ABC00E1342D /* snapcat2.gif in Resources */,
 				562DA35D197459E500349298 /* InfoPlist.strings in Resources */,
 				562DA365197459E500349298 /* Images.xcassets in Resources */,
+				5646EF2119749AB500E1342D /* snapcat1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +258,7 @@
 			files = (
 				562DA363197459E500349298 /* SCAppDelegate.m in Sources */,
 				562DA35F197459E500349298 /* main.m in Sources */,
+				5646EF15197469CD00E1342D /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +463,7 @@
 				562DA37D197459E500349298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		562DA37E197459E500349298 /* Build configuration list for PBXNativeTarget "SnapcatTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +472,7 @@
 				562DA380197459E500349298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

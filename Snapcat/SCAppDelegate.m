@@ -7,6 +7,7 @@
 //
 
 #import "SCAppDelegate.h"
+#import "RootViewController.h"
 
 @implementation SCAppDelegate
 
@@ -16,6 +17,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    self.viewController = [[RootViewController alloc] init];
+    [self.window setRootViewController:self.viewController];
     return YES;
 }
 
