@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		562DA353197459E500349298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA352197459E500349298 /* Foundation.framework */; };
+		562DA355197459E500349298 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA354197459E500349298 /* CoreGraphics.framework */; };
+		562DA357197459E500349298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA356197459E500349298 /* UIKit.framework */; };
+		562DA35D197459E500349298 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 562DA35B197459E500349298 /* InfoPlist.strings */; };
+		562DA35F197459E500349298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 562DA35E197459E500349298 /* main.m */; };
+		562DA363197459E500349298 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 562DA362197459E500349298 /* SCAppDelegate.m */; };
+		562DA365197459E500349298 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562DA364197459E500349298 /* Images.xcassets */; };
+		562DA36C197459E500349298 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA36B197459E500349298 /* XCTest.framework */; };
+		562DA36D197459E500349298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA352197459E500349298 /* Foundation.framework */; };
+		562DA36E197459E500349298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA356197459E500349298 /* UIKit.framework */; };
+		562DA376197459E500349298 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 562DA374197459E500349298 /* InfoPlist.strings */; };
+		562DA378197459E500349298 /* SnapcatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 562DA377197459E500349298 /* SnapcatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		562DA36F197459E500349298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 562DA347197459E500349298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 562DA34E197459E500349298;
+			remoteInfo = Snapcat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		562DA34F197459E500349298 /* Snapcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		562DA352197459E500349298 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		562DA354197459E500349298 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		562DA356197459E500349298 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		562DA35A197459E500349298 /* Snapcat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Snapcat-Info.plist"; sourceTree = "<group>"; };
+		562DA35C197459E500349298 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		562DA35E197459E500349298 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		562DA360197459E500349298 /* Snapcat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snapcat-Prefix.pch"; sourceTree = "<group>"; };
+		562DA361197459E500349298 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		562DA362197459E500349298 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		562DA364197459E500349298 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		562DA36A197459E500349298 /* SnapcatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapcatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		562DA36B197459E500349298 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		562DA373197459E500349298 /* SnapcatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapcatTests-Info.plist"; sourceTree = "<group>"; };
+		562DA375197459E500349298 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		562DA377197459E500349298 /* SnapcatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapcatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		562DA34C197459E500349298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA355197459E500349298 /* CoreGraphics.framework in Frameworks */,
+				562DA357197459E500349298 /* UIKit.framework in Frameworks */,
+				562DA353197459E500349298 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562DA367197459E500349298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA36C197459E500349298 /* XCTest.framework in Frameworks */,
+				562DA36E197459E500349298 /* UIKit.framework in Frameworks */,
+				562DA36D197459E500349298 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		562DA346197459E500349298 = {
+			isa = PBXGroup;
+			children = (
+				562DA358197459E500349298 /* Snapcat */,
+				562DA371197459E500349298 /* SnapcatTests */,
+				562DA351197459E500349298 /* Frameworks */,
+				562DA350197459E500349298 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		562DA350197459E500349298 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				562DA34F197459E500349298 /* Snapcat.app */,
+				562DA36A197459E500349298 /* SnapcatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		562DA351197459E500349298 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				562DA352197459E500349298 /* Foundation.framework */,
+				562DA354197459E500349298 /* CoreGraphics.framework */,
+				562DA356197459E500349298 /* UIKit.framework */,
+				562DA36B197459E500349298 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		562DA358197459E500349298 /* Snapcat */ = {
+			isa = PBXGroup;
+			children = (
+				562DA361197459E500349298 /* SCAppDelegate.h */,
+				562DA362197459E500349298 /* SCAppDelegate.m */,
+				562DA364197459E500349298 /* Images.xcassets */,
+				562DA359197459E500349298 /* Supporting Files */,
+			);
+			path = Snapcat;
+			sourceTree = "<group>";
+		};
+		562DA359197459E500349298 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				562DA35A197459E500349298 /* Snapcat-Info.plist */,
+				562DA35B197459E500349298 /* InfoPlist.strings */,
+				562DA35E197459E500349298 /* main.m */,
+				562DA360197459E500349298 /* Snapcat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		562DA371197459E500349298 /* SnapcatTests */ = {
+			isa = PBXGroup;
+			children = (
+				562DA377197459E500349298 /* SnapcatTests.m */,
+				562DA372197459E500349298 /* Supporting Files */,
+			);
+			path = SnapcatTests;
+			sourceTree = "<group>";
+		};
+		562DA372197459E500349298 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				562DA373197459E500349298 /* SnapcatTests-Info.plist */,
+				562DA374197459E500349298 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		562DA34E197459E500349298 /* Snapcat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 562DA37B197459E500349298 /* Build configuration list for PBXNativeTarget "Snapcat" */;
+			buildPhases = (
+				562DA34B197459E500349298 /* Sources */,
+				562DA34C197459E500349298 /* Frameworks */,
+				562DA34D197459E500349298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Snapcat;
+			productName = Snapcat;
+			productReference = 562DA34F197459E500349298 /* Snapcat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		562DA369197459E500349298 /* SnapcatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 562DA37E197459E500349298 /* Build configuration list for PBXNativeTarget "SnapcatTests" */;
+			buildPhases = (
+				562DA366197459E500349298 /* Sources */,
+				562DA367197459E500349298 /* Frameworks */,
+				562DA368197459E500349298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				562DA370197459E500349298 /* PBXTargetDependency */,
+			);
+			name = SnapcatTests;
+			productName = SnapcatTests;
+			productReference = 562DA36A197459E500349298 /* SnapcatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		562DA347197459E500349298 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ritu Vincent";
+				TargetAttributes = {
+					562DA369197459E500349298 = {
+						TestTargetID = 562DA34E197459E500349298;
+					};
+				};
+			};
+			buildConfigurationList = 562DA34A197459E500349298 /* Build configuration list for PBXProject "Snapcat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 562DA346197459E500349298;
+			productRefGroup = 562DA350197459E500349298 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				562DA34E197459E500349298 /* Snapcat */,
+				562DA369197459E500349298 /* SnapcatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		562DA34D197459E500349298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA35D197459E500349298 /* InfoPlist.strings in Resources */,
+				562DA365197459E500349298 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562DA368197459E500349298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA376197459E500349298 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		562DA34B197459E500349298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA363197459E500349298 /* SCAppDelegate.m in Sources */,
+				562DA35F197459E500349298 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562DA366197459E500349298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562DA378197459E500349298 /* SnapcatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		562DA370197459E500349298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 562DA34E197459E500349298 /* Snapcat */;
+			targetProxy = 562DA36F197459E500349298 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		562DA35B197459E500349298 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				562DA35C197459E500349298 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		562DA374197459E500349298 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				562DA375197459E500349298 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		562DA379197459E500349298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		562DA37A197459E500349298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		562DA37C197459E500349298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
+				INFOPLIST_FILE = "Snapcat/Snapcat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		562DA37D197459E500349298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
+				INFOPLIST_FILE = "Snapcat/Snapcat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		562DA37F197459E500349298 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Snapcat.app/Snapcat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SnapcatTests/SnapcatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		562DA380197459E500349298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Snapcat.app/Snapcat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
+				INFOPLIST_FILE = "SnapcatTests/SnapcatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		562DA34A197459E500349298 /* Build configuration list for PBXProject "Snapcat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562DA379197459E500349298 /* Debug */,
+				562DA37A197459E500349298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		562DA37B197459E500349298 /* Build configuration list for PBXNativeTarget "Snapcat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562DA37C197459E500349298 /* Debug */,
+				562DA37D197459E500349298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		562DA37E197459E500349298 /* Build configuration list for PBXNativeTarget "SnapcatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562DA37F197459E500349298 /* Debug */,
+				562DA380197459E500349298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 562DA347197459E500349298 /* Project object */;
+}
