@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface RootViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface RootViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 
 @property (strong, nonatomic) UIImagePickerController *picker;
-@property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UIImage *sticker;
+@property (strong, nonatomic) UIView *canvas;
+@property (strong, nonatomic) UIImageView *picture;
+@property (strong, nonatomic) UIImage *lastSticker;
+@property (strong, nonatomic) MFMessageComposeViewController* sendText;
+
 
 @end
+
+

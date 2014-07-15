@@ -8,12 +8,17 @@
 
 #import "RootViewController.h"
 #import "SCTableViewCell.h"
+#import "SCStickerInfo.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <MessageUI/MessageUI.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface RootViewController ()
 
 @end
 
 @implementation RootViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,30 +45,59 @@
 
 - (void) catButtonClick:(UIButton *) sender
 {
-    self.sticker = sender.imageView.image;
+    self.lastSticker = sender.imageView.image;
 }
 
 - (void) handleSingleTap:(UITapGestureRecognizer *)recognizer {
-    CGPoint location = [recognizer locationInView:self.imageView];
+    CGPoint location = [recognizer locationInView:self.picture];
     int x = location.x;
     int y = location.y;
     
-    UIImage *baseImage = self.imageView.image;
-    CGSize baseSize = self.imageView.frame.size;
-    CGSize stickerSize = self.sticker.size;
+    //UIImage *baseImage = self.picture.image;
+    //CGSize baseSize = self.picture.frame.size;
+    //CGSize stickerSize = self.sticker.size;
     
-    UIGraphicsBeginImageContext(baseSize);
+    UIImageView *tempSticker = [[UIImageView alloc] initWithFrame:CGRectMake(x - 40, y - 40, 80, 80)];
+    tempSticker.userInteractionEnabled = YES;
+    tempSticker.image = self.lastSticker;
     
-    // Draw background
-    [baseImage drawInRect:CGRectMake(0, 0, baseSize.width, baseSize.height)];
+    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(deleteSticker:)];
+    [tempSticker addGestureRecognizer:longTap];
+
+    [self.canvas addSubview:tempSticker];
+    [self playSound];
+
+}
+
+- (void) deleteSticker:(UILongPressGestureRecognizer *) recognizer {
+    UIView* sticker = recognizer.view;
+    [sticker removeFromSuperview];
+}
+
+- (void) playSound{
+    SystemSoundID soundID;
     
-    // Draw sticker
-    [self.sticker drawInRect:CGRectMake(x - 40, y - 40, 80, 80)];
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"meow" ofType:@"mp3"];
+    CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
+    
+    AudioServicesCreateSystemSoundID (url, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
+
+- (UIImage *) makeFinalImage {
+    UIGraphicsBeginImageContext(self.canvas.frame.size);
+    
+    for (UIView* subView in self.canvas.subviews) {
+        if ([subView isKindOfClass:[UIImageView class]]) {
+            // Draw image
+            [((UIImageView *)subView).image drawInRect:subView.frame];
+        }
+    }
     
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    self.imageView.image = newImage;
     
     UIGraphicsEndImageContext();
+    return newImage;
 }
 
 - (void)viewDidLoad
@@ -71,19 +105,30 @@
     [super viewDidLoad];
     
     CGRect bounds = self.view.bounds;
-    self.imageView = [[UIImageView alloc] init];
+    self.canvas = [[UIView alloc] init];
+    [self.canvas setFrame:CGRectMake(0, 0, bounds.size.width, 400)];
+    [self.view addSubview:self.canvas];
+    
+    
+    /*self.imageView = [[UIView alloc] init];
     self.imageView.userInteractionEnabled = YES;
     [self.imageView setFrame:CGRectMake(0, 0, bounds.size.width, 400)];
-    [self.view addSubview:self.imageView];
+    [self.view addSubview:self.imageView];*/
     
-    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    [self.imageView addGestureRecognizer:singleFingerTap];
+    //UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    //[self.imageView addGestureRecognizer:singleFingerTap];
     
     UIButton* button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setFrame:CGRectMake(0, 400, bounds.size.width, 20)];
+    [button setFrame:CGRectMake(0, 400, bounds.size.width/2, 20)];
     [button setTitle:@"Choose a picture" forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button addTarget:self action: @selector(cameraButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton* sendText = [UIButton buttonWithType:UIButtonTypeSystem];
+    [sendText setFrame:CGRectMake(bounds.size.width/2, 400, bounds.size.width/2, 20)];
+    [sendText setTitle:@"Text picture" forState:UIControlStateNormal];
+    [self.view addSubview:sendText];
+    [sendText addTarget:self action: @selector(sendText:) forControlEvents:UIControlEventTouchUpInside];
     
     
     UIScrollView* catTable = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 420, bounds.size.width, 80)];
@@ -103,6 +148,30 @@
     [self.view addSubview:catTable];
 }
 
+- (void)sendText:(UIButton *)sender{
+    NSLog(@"Send Text");
+    MFMessageComposeViewController* sendText = [[MFMessageComposeViewController alloc] init];
+    sendText.messageComposeDelegate = self;
+    sendText.recipients = [NSArray arrayWithObjects: nil];
+    
+    NSData* imageData = UIImageJPEGRepresentation([self makeFinalImage], 1.0);
+    if([MFMessageComposeViewController canSendText])
+    {
+        if([MFMessageComposeViewController respondsToSelector:@selector(canSendAttachments)] && [MFMessageComposeViewController canSendAttachments])
+        {
+            NSString* uti = (NSString*)kUTTypeMessage;
+            [sendText addAttachmentData:imageData typeIdentifier:uti filename:@"kitty.jpg"];
+        }
+        
+        [self presentViewController:sendText animated:YES completion:nil];
+    }
+}
+
+- (void) messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -113,9 +182,17 @@
 {
     NSLog(@"Image selected");
     
+    self.picture = [[UIImageView alloc] initWithFrame:self.canvas.frame];
+    
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     
-    self.imageView.image = chosenImage;
+    self.picture.image = chosenImage;
+    self.picture.userInteractionEnabled = YES;
+    [self.canvas addSubview:self.picture];
+    
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [self.picture addGestureRecognizer:singleFingerTap];
+
     
     [self.picker dismissViewControllerAnimated:NO completion:nil];
 }

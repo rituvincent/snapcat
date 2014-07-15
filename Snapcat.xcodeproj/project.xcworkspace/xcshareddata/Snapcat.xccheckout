@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5764CA21-FC0D-4B61-A6AE-3300D0C0D8C2</string>
+	<string>059FCBB9-291F-4512-B7DF-02E8D3FA201C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Snapcat</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5F34B200-B93D-4C49-9705-8FEB8214A9FB</key>
-		<string>https://github.com/rituvincent/snapcat.git</string>
+		<key>2DEE9287-9613-40AF-89C6-156F0E612AFA</key>
+		<string>https://github.com/rituvincent/snapcat</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Snapcat.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5F34B200-B93D-4C49-9705-8FEB8214A9FB</key>
+		<key>2DEE9287-9613-40AF-89C6-156F0E612AFA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rituvincent/snapcat.git</string>
+	<string>https://github.com/rituvincent/snapcat</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5F34B200-B93D-4C49-9705-8FEB8214A9FB</string>
+	<string>2DEE9287-9613-40AF-89C6-156F0E612AFA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5F34B200-B93D-4C49-9705-8FEB8214A9FB</string>
+			<string>2DEE9287-9613-40AF-89C6-156F0E612AFA</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Snapcat</string>
+			<string>snapcat3</string>
 		</dict>
 	</array>
 </dict>

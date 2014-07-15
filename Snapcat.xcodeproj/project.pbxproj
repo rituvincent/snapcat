@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1774E0371975B6A90091C660 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1774E0361975B6A90091C660 /* meow.mp3 */; };
+		179550E61975CE8700E98279 /* annie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 179550E51975CE8700E98279 /* annie.mp3 */; };
 		562DA353197459E500349298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA352197459E500349298 /* Foundation.framework */; };
 		562DA355197459E500349298 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA354197459E500349298 /* CoreGraphics.framework */; };
 		562DA357197459E500349298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562DA356197459E500349298 /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1774E0361975B6A90091C660 /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
+		179550E51975CE8700E98279 /* annie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = annie.mp3; sourceTree = "<group>"; };
 		562DA34F197459E500349298 /* Snapcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		562DA352197459E500349298 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		562DA354197459E500349298 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +118,8 @@
 		562DA358197459E500349298 /* Snapcat */ = {
 			isa = PBXGroup;
 			children = (
+				179550E51975CE8700E98279 /* annie.mp3 */,
+				1774E0361975B6A90091C660 /* meow.mp3 */,
 				5646EF2219749ABC00E1342D /* snapcat2.gif */,
 				5646EF2019749AB500E1342D /* snapcat1.gif */,
 				5646EF12197469CD00E1342D /* RootViewController.h */,
@@ -204,7 +210,7 @@
 				ORGANIZATIONNAME = "Ritu Vincent";
 				TargetAttributes = {
 					562DA34E197459E500349298 = {
-						DevelopmentTeam = G7HH3F8CAK;
+						DevelopmentTeam = YZ5Q977P68;
 					};
 					562DA369197459E500349298 = {
 						TestTargetID = 562DA34E197459E500349298;
@@ -235,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5646EF2319749ABC00E1342D /* snapcat2.gif in Resources */,
+				1774E0371975B6A90091C660 /* meow.mp3 in Resources */,
+				179550E61975CE8700E98279 /* annie.mp3 in Resources */,
 				562DA35D197459E500349298 /* InfoPlist.strings in Resources */,
 				562DA365197459E500349298 /* Images.xcassets in Resources */,
 				5646EF2119749AB500E1342D /* snapcat1.gif in Resources */,
@@ -382,6 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
 				INFOPLIST_FILE = "Snapcat/Snapcat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -398,6 +407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snapcat/Snapcat-Prefix.pch";
 				INFOPLIST_FILE = "Snapcat/Snapcat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
