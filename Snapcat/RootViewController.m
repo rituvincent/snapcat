@@ -8,10 +8,10 @@
 
 #import "RootViewController.h"
 #import "SCTableViewCell.h"
-#import "SCStickerInfo.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <MessageUI/MessageUI.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface RootViewController ()
 
@@ -19,6 +19,9 @@
 
 @implementation RootViewController
 
+
+UIButton* button;
+UIButton* sendText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,10 +56,7 @@
     int x = location.x;
     int y = location.y;
     
-    //UIImage *baseImage = self.picture.image;
-    //CGSize baseSize = self.picture.frame.size;
-    //CGSize stickerSize = self.sticker.size;
-    
+
     UIImageView *tempSticker = [[UIImageView alloc] initWithFrame:CGRectMake(x - 40, y - 40, 80, 80)];
     tempSticker.userInteractionEnabled = YES;
     tempSticker.image = self.lastSticker;
@@ -66,6 +66,9 @@
 
     [self.canvas addSubview:tempSticker];
     [self playSound];
+    
+    [self.view bringSubviewToFront:button];
+    [self.view bringSubviewToFront:sendText];
 
 }
 
@@ -106,32 +109,32 @@
     
     CGRect bounds = self.view.bounds;
     self.canvas = [[UIView alloc] init];
-    [self.canvas setFrame:CGRectMake(0, 0, bounds.size.width, 400)];
+    [self.canvas setFrame:CGRectMake(0, 0, bounds.size.width, 448)];
     [self.view addSubview:self.canvas];
     
-    
-    /*self.imageView = [[UIView alloc] init];
-    self.imageView.userInteractionEnabled = YES;
-    [self.imageView setFrame:CGRectMake(0, 0, bounds.size.width, 400)];
-    [self.view addSubview:self.imageView];*/
-    
-    //UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    //[self.imageView addGestureRecognizer:singleFingerTap];
-    
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setFrame:CGRectMake(0, 400, bounds.size.width/2, 20)];
-    [button setTitle:@"Choose a picture" forState:UIControlStateNormal];
+    button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setFrame:CGRectMake(0, 448, bounds.size.width/2, 40)];
+    [button setTitle:@"Take a picture" forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button addTarget:self action: @selector(cameraButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    button.layer.borderWidth = 1.0f;
+    button.backgroundColor = [UIColor whiteColor];
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.cornerRadius = 4.0f;
     
-    UIButton* sendText = [UIButton buttonWithType:UIButtonTypeSystem];
-    [sendText setFrame:CGRectMake(bounds.size.width/2, 400, bounds.size.width/2, 20)];
+    sendText = [UIButton buttonWithType:UIButtonTypeSystem];
+    [sendText setFrame:CGRectMake(bounds.size.width/2, 448, bounds.size.width/2, 40)];
     [sendText setTitle:@"Text picture" forState:UIControlStateNormal];
     [self.view addSubview:sendText];
     [sendText addTarget:self action: @selector(sendText:) forControlEvents:UIControlEventTouchUpInside];
+    sendText.layer.borderWidth = 1.0f;
+    sendText.backgroundColor = [UIColor whiteColor];
+    sendText.layer.borderColor = [UIColor blackColor].CGColor;
+    sendText.layer.cornerRadius = 4.0f;
     
     
-    UIScrollView* catTable = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 420, bounds.size.width, 80)];
+    
+    UIScrollView* catTable = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 488, bounds.size.width, 80)];
     for (int i = 0; i < 10; i++) {
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(i * 80, 0, 80, 80)];
