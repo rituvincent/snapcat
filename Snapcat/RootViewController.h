@@ -12,12 +12,15 @@
 @interface RootViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 
-@property (strong, nonatomic) UIImagePickerController *picker;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIView *canvas;
 @property (strong, nonatomic) UIImageView *picture;
 @property (strong, nonatomic) UIImage *lastSticker;
-@property (strong, nonatomic) MFMessageComposeViewController* sendText;
 
+@property (strong, nonatomic) UIButton* takePictureButton;
+@property (strong, nonatomic) UIButton* sendTextButton;
+
+- (void)refreshAll;
 
 @end
 
